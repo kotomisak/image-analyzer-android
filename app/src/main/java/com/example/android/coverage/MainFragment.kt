@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.codelabs.navigation
+package com.example.android.coverage
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

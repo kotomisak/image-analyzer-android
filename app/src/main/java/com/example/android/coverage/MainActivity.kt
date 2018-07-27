@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.codelabs.navigation
+package com.example.android.coverage
 
 import android.content.res.Resources
 import android.os.Bundle

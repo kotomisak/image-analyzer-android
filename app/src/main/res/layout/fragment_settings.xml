@@ -2,7 +2,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context="com.example.android.codelabs.navigation.SettingsFragment">
+	tools:context="com.example.android.coverage.navigation.com.example.android.coverage.SettingsFragment">
 
 	<TextView
 		android:id="@+id/text"

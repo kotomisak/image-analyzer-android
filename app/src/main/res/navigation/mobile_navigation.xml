@@ -17,7 +17,7 @@
 	app:startDestination="@+id/launcher_home">
 	<fragment
 		android:id="@+id/launcher_home"
-		android:name="com.example.android.codelabs.navigation.MainFragment"
+		android:name="com.example.android.coverage.MainFragment"
 		android:label="@string/home"
 		tools:layout="@layout/main_fragment">
 
@@ -33,7 +33,7 @@
 
 	<fragment
 		android:id="@+id/flow_step_one"
-		android:name="com.example.android.codelabs.navigation.FlowStepFragment"
+		android:name="com.example.android.coverage.FlowStepFragment"
 		tools:layout="@layout/flow_step_one_fragment">
 		<argument
 			android:name="step"
@@ -48,7 +48,7 @@
 
 	<fragment
 		android:id="@+id/flow_step_two"
-		android:name="com.example.android.codelabs.navigation.FlowStepFragment"
+		android:name="com.example.android.coverage.FlowStepFragment"
 		tools:layout="@layout/flow_step_two_fragment">
 
 		<argument
@@ -64,13 +64,13 @@
 
 	<fragment
 		android:id="@+id/settings_fragment"
-		android:name="com.example.android.codelabs.navigation.SettingsFragment"
+		android:name="com.example.android.coverage.SettingsFragment"
 		android:label="fragment_settings"
 		tools:layout="@layout/fragment_settings" />
 
 	<fragment
 		android:id="@+id/android"
-		android:name="com.example.android.codelabs.navigation.DeepLinkFragment"
+		android:name="com.example.android.coverage.DeepLinkFragment"
 		android:label="@string/deeplink"
 		tools:layout="@layout/deeplink_fragment">
 
