@@ -15,6 +15,7 @@
  */
 
 apply plugin: 'com.android.application'
+apply from: '../common.gradle'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'androidx.navigation.safeargs'
@@ -30,6 +31,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [crashlytics:getLocalProperty("crashlytics.key")]
+        resValue "string", "app_name", "Test Coverage (DEFAULT)"
     }
 
     buildTypes {
@@ -45,7 +47,28 @@ android {
     dataBinding {
         enabled = true
     }
+    flavorDimensions "env"
+
     productFlavors {
+        mock {
+            dimension = "env"
+            versionNameSuffix "-mock"
+            applicationIdSuffix ".mock"
+            resValue "string", "app_name", "Test Coverage (MOCK)"
+        }
+
+        dev {
+            dimension = "env"
+            versionNameSuffix "-dev"
+            applicationIdSuffix ".dev"
+            resValue "string", "app_name", "Test Coverage (DEV)"
+        }
+
+        production {
+            dimension = "env"
+            applicationIdSuffix ".prod"
+            resValue "string", "app_name", "Test Coverage"
+        }
     }
 
     lintOptions {

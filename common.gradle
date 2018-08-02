@@ -104,9 +104,6 @@ allprojects {
 				force "com.android.support:recyclerview-v7:$android_support_version"
 				force "com.android.support:gridlayout-v7:$android_support_version"
 				force "com.android.support:customtabs:$android_support_version"
-
-				force "android.arch.lifecycle:runtime:$android_arch_version"
-				force "android.arch.lifecycle:extensions:$android_arch_version"
 			}
 		}
 	}
