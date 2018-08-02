@@ -16,6 +16,7 @@
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'androidx.navigation.safeargs'
 
 android {
@@ -55,6 +56,8 @@ dependencies {
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //kapt 'androidx.databinding:databinding-compiler:3.3.0-alpha04'
 
     implementation "com.android.support:design:$android_support_version"
     implementation "com.android.support:appcompat-v7:$android_support_version"
