@@ -2,17 +2,53 @@
 
 ./gradlew clean
 
-./gradlew module_feature1:jacocoTestReport -PjacocoBuildType=debug -PjacocoEnv=dev
-if [[ "$OSTYPE" == "darwin"* ]]; then   # Open report in chrome on Mac OSX
+# default code coverage
+#./gradlew clean legalzoom-base:testDevDebug legalzoom-base:createDevDebugCoverageReport
+
+# Kotlin specific codeCoverage with filtering
+
+
+./gradlew legalzoom-base:jacocoTestReport -PjacocoBuildType=debug -PjacocoEnv=dev
+if [[ "$OSTYPE" == "darwin"* ]]; then   # Mac OSX
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk ./legalzoom-base/build/reports/jacocoTestReport/html/index.html
 fi
 
-./gradlew module_feature2:jacocoTestReport -PjacocoBuildType=release -PjacocoEnv=dev
-if [[ "$OSTYPE" == "darwin"* ]]; then   # Open report in chrome on Mac OSX
+./gradlew legalzoom-consultation:jacocoTestReport -PjacocoBuildType=release -PjacocoEnv=dev
+if [[ "$OSTYPE" == "darwin"* ]]; then   # Mac OSX
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk ./legalzoom-consultation/build/reports/jacocoTestReport/html/index.html
 fi
 
-./gradlew app:jacocoTestReport -PjacocoBuildType=release -PjacocoEnv=dev
-if [[ "$OSTYPE" == "darwin"* ]]; then   # Open report in chrome on Mac OSX
+./gradlew legalzoom-genesyschat:jacocoTestReport -PjacocoBuildType=release -PjacocoEnv=dev
+if [[ "$OSTYPE" == "darwin"* ]]; then   # Mac OSX
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk ./legalzoom-genesyschat/build/reports/jacocoTestReport/html/index.html
+fi
+
+./gradlew legalzoom-login:jacocoTestReport -PjacocoBuildType=release -PjacocoEnv=dev
+if [[ "$OSTYPE" == "darwin"* ]]; then   # Mac OSX
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk ./legalzoom-login/build/reports/jacocoTestReport/html/index.html
+fi
+
+./gradlew legalzoom-settings:jacocoTestReport -PjacocoBuildType=release -PjacocoEnv=dev
+if [[ "$OSTYPE" == "darwin"* ]]; then   # Mac OSX
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk ./legalzoom-settings/build/reports/jacocoTestReport/html/index.html
+fi
+
+./gradlew legalzoom-tracker:jacocoTestReport -PjacocoBuildType=release -PjacocoEnv=dev
+if [[ "$OSTYPE" == "darwin"* ]]; then   # Mac OSX
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk ./legalzoom-tracker/build/reports/jacocoTestReport/html/index.html
+fi
+
+./gradlew legalzoom-urbanairship:jacocoTestReport -PjacocoBuildType=release -PjacocoEnv=dev
+if [[ "$OSTYPE" == "darwin"* ]]; then   # Mac OSX
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk ./legalzoom-urbanairship/build/reports/jacocoTestReport/html/index.html
+fi
+
+./gradlew legalzoom-vault:jacocoTestReport -PjacocoBuildType=release -PjacocoEnv=dev
+if [[ "$OSTYPE" == "darwin"* ]]; then   # Mac OSX
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk ./legalzoom-vault/build/reports/jacocoTestReport/html/index.html
+fi
+
+./gradlew mobile:jacocoTestReport -PjacocoBuildType=release -PjacocoEnv=dev
+if [[ "$OSTYPE" == "darwin"* ]]; then   # Mac OSX
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --kiosk ./mobile/build/reports/jacocoTestReport/html/index.html
 fi

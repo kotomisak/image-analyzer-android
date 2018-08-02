@@ -12,7 +12,7 @@ tasks.withType(Test) {
 }
 
 jacoco {
-	toolVersion = "$jacocoVersion"
+	toolVersion = "$jacoco_version"
 	reportsDir = file("$buildDir/reports")
 }
 

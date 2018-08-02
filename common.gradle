@@ -7,10 +7,11 @@ allprojects {
 	apply plugin: 'kotlin-kapt'
 	apply plugin: 'kotlin-android'
 	apply plugin: 'kotlin-android-extensions'
+	apply plugin: 'realm-android'
 	apply plugin: 'kotlin-allopen'
 
 	allOpen {
-		annotation('com.example.android.core.OpenForMocking')
+		annotation('com.legalzoom.kollaborate.base.OpenForMocking')
 	}
 
 	kapt {
@@ -42,6 +43,12 @@ allprojects {
 
 		sourceSets {
 			dev {
+				java.srcDirs += 'src/server/java'
+			}
+			qa {
+				java.srcDirs += 'src/server/java'
+			}
+			stg {
 				java.srcDirs += 'src/server/java'
 			}
 			production {
@@ -97,19 +104,21 @@ allprojects {
 
 		configurations.all {
 			resolutionStrategy {
-				force "com.android.support:support-v4:$androidSupportVersion"
-				force "com.android.support:appcompat-v7:$androidSupportVersion"
-				force "com.android.support:cardview-v7:$androidSupportVersion"
-				force "com.android.support:design:$androidSupportVersion"
-				force "com.android.support:recyclerview-v7:$androidSupportVersion"
-				force "com.android.support:gridlayout-v7:$androidSupportVersion"
-				force "com.android.support:customtabs:$androidSupportVersion"
+				force "com.android.support:support-v4:$android_support_version"
+				force "com.android.support:appcompat-v7:$android_support_version"
+				force "com.android.support:cardview-v7:$android_support_version"
+				force "com.android.support:design:$android_support_version"
+				force "com.android.support:recyclerview-v7:$android_support_version"
+				force "com.android.support:gridlayout-v7:$android_support_version"
+				force "com.android.support:customtabs:$android_support_version"
 
-				force "android.arch.lifecycle:runtime:$androidArchVersion"
-				force "android.arch.lifecycle:extensions:$androidArchVersion"
-				force "com.google.android.gms:play-services-base:$gcmVersion"
-				force "com.google.gms:google-services:$googleServicesVersion"
-				force "com.google.firebase:firebase-iid:$fcmIidVersion"
+				force "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+
+				force "android.arch.lifecycle:runtime:$android_arch_version"
+				force "android.arch.lifecycle:extensions:$android_arch_version"
+				force "com.google.android.gms:play-services-base:$gcm_version"
+				force "com.google.gms:google-services:$google_services_version"
+				force "com.google.firebase:firebase-iid:$fcm_iid_version"
 			}
 		}
 	}
@@ -120,21 +129,27 @@ allprojects {
 	 * [tests] 		- becasuse dependencies in tests don't work :(
 	 */
 	dependencies {
+		// Dagger
+		kapt "com.google.dagger:dagger-compiler:$dagger_version"
+		kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+
 		// AndroidJUnitRunner and JUnit Rules
-		androidTestImplementation "com.android.support.test:runner:$androidSupportTestVersion"
-		androidTestImplementation "com.android.support.test:rules:$androidSupportTestVersion"
+		androidTestImplementation "com.android.support.test:runner:$android_support_test_version"
+		androidTestImplementation "com.android.support.test:rules:$android_support_test_version"
 
 		/**
 		 *  UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST
 		 */
-		androidTestImplementation "org.mockito:mockito-android:$mockitoVersion"
+		androidTestImplementation "org.mockito:mockito-android:$mockito_version"
 
 		// Espresso core
-		androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
+		androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso_version"
 		// Espresso-contrib for DatePicker, RecyclerView, Drawer actions, Accessibility checks, CountingIdlingResource
-		androidTestImplementation "com.android.support.test.espresso:espresso-contrib:$espressoVersion"
-		androidTestImplementation "com.android.support.test.espresso:espresso-intents:$espressoVersion"
-		androidTestImplementation "com.android.support:support-annotations:$androidSupportTestVersion"
+		androidTestImplementation "com.android.support.test.espresso:espresso-contrib:$espresso_version"
+		androidTestImplementation "com.android.support.test.espresso:espresso-intents:$espresso_version"
+		androidTestImplementation "com.android.support:support-annotations:$android_support_version"
+
+		testImplementation project(':legalzoom-testutils')
 	}
 }
 
