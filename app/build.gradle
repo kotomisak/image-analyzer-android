@@ -18,6 +18,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion sdk_version
@@ -28,6 +29,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [crashlytics:getLocalProperty("crashlytics.key")]
     }
 
     buildTypes {
@@ -69,4 +71,8 @@ dependencies {
 
     implementation "android.arch.navigation:navigation-fragment:$android_navigation_version"
     implementation "android.arch.navigation:navigation-ui:$android_navigation_version"
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.4@aar') {
+        transitive = true;
+    }
 }
