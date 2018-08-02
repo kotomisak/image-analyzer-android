@@ -44,12 +44,6 @@ allprojects {
 			dev {
 				java.srcDirs += 'src/server/java'
 			}
-			qa {
-				java.srcDirs += 'src/server/java'
-			}
-			stg {
-				java.srcDirs += 'src/server/java'
-			}
 			production {
 				java.srcDirs += 'src/server/java'
 			}
@@ -111,13 +105,8 @@ allprojects {
 				force "com.android.support:gridlayout-v7:$android_support_version"
 				force "com.android.support:customtabs:$android_support_version"
 
-				force "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
-
 				force "android.arch.lifecycle:runtime:$android_arch_version"
 				force "android.arch.lifecycle:extensions:$android_arch_version"
-				force "com.google.android.gms:play-services-base:$gcm_version"
-				force "com.google.gms:google-services:$google_services_version"
-				force "com.google.firebase:firebase-iid:$fcm_iid_version"
 			}
 		}
 	}
