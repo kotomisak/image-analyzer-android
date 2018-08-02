@@ -14,4 +14,4 @@
  * limitations under the License.
  */
 
-include ':app', ':module_feature1', ':module_feature2', ':module_feature_core'
+include ':app'

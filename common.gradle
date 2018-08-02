@@ -7,7 +7,6 @@ allprojects {
 	apply plugin: 'kotlin-kapt'
 	apply plugin: 'kotlin-android'
 	apply plugin: 'kotlin-android-extensions'
-	apply plugin: 'realm-android'
 	apply plugin: 'kotlin-allopen'
 
 	allOpen {
@@ -29,14 +28,14 @@ allprojects {
 			targetCompatibility JavaVersion.VERSION_1_8
 		}
 
-		compileSdkVersion compile_sdk_version
+		compileSdkVersion sdk_version
 		buildToolsVersion build_tools_version
 		dataBinding.enabled = true
 		flavorDimensions "env"
 
 		defaultConfig {
 			minSdkVersion min_sdk_version
-			targetSdkVersion compile_sdk_version
+			targetSdkVersion sdk_version
 			testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 			vectorDrawables.useSupportLibrary = true
 		}
@@ -149,7 +148,7 @@ allprojects {
 		androidTestImplementation "com.android.support.test.espresso:espresso-intents:$espresso_version"
 		androidTestImplementation "com.android.support:support-annotations:$android_support_version"
 
-		testImplementation project(':legalzoom-testutils')
+		//testImplementation project(':module-feature-core-test')
 	}
 }
 
