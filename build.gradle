@@ -21,7 +21,7 @@ buildscript {
     ext {
 
         min_sdk_version = 21
-        sdk_version = 27
+        sdk_version = 28
         build_tools_version = '27.0.3'
         kotlin_version = '1.2.50'
         android_binding_version = '1.3.3'
@@ -43,7 +43,7 @@ buildscript {
         powermock_version = '1.7.1'//https://github.com/powermock/powermock/wiki/Mockito#supported-versions
         stetho_version = '1.5.0'
         glide_version = '4.4.0'
-        crashlytics_version = '2.9.1@aar'
+        crashlytics_version = '2.9.4@aar'
         fabric_version = '1.25.4'
         jacoco_version = '0.8.1'
 

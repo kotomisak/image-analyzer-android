@@ -114,6 +114,10 @@ allprojects {
 	 * [tests] 		- becasuse dependencies in tests don't work :(
 	 */
 	dependencies {
+
+		// Kotlin
+		implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
 		// Dagger
 		kapt "com.google.dagger:dagger-compiler:$dagger_version"
 		kapt "com.google.dagger:dagger-android-processor:$dagger_version"
