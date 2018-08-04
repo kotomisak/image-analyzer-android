@@ -127,6 +127,12 @@ allprojects {
 		androidTestImplementation "com.android.support.test:rules:$android_support_test_version"
 
 		/**
+		 * UNIT-TEST
+		 */
+
+		testImplementation "junit:junit:$junit_version"
+
+		/**
 		 *  UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST
 		 */
 		androidTestImplementation "org.mockito:mockito-android:$mockito_version"
@@ -139,6 +145,7 @@ allprojects {
 		androidTestImplementation "com.android.support:support-annotations:$android_support_version"
 
 		//testImplementation project(':module-feature-core-test')
+
 	}
 }
 
