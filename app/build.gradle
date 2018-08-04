@@ -79,6 +79,9 @@ android {
 
 dependencies {
 
+    implementation project(':module-feature-core')
+    implementation project(':module-feature-1')
+
     implementation "com.android.support:design:$android_support_version"
     implementation "com.android.support:appcompat-v7:$android_support_version"
     implementation "com.android.support:cardview-v7:$android_support_version"
