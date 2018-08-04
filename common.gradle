@@ -115,26 +115,28 @@ allprojects {
 	 */
 	dependencies {
 
-		// Kotlin
+		// Common Navigation
+		implementation "android.arch.navigation:navigation-fragment:$android_navigation_version"
+		implementation "android.arch.navigation:navigation-ui:$android_navigation_version"
+
+		// Common Support
+		implementation "com.android.support:appcompat-v7:$android_support_version"
+
+		// Common Kotlin
 		implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-		// Dagger
+		// Common Dagger
 		kapt "com.google.dagger:dagger-compiler:$dagger_version"
 		kapt "com.google.dagger:dagger-android-processor:$dagger_version"
 
-		// AndroidJUnitRunner and JUnit Rules
+		// Common AndroidJUnitRunner and JUnit Rules
 		androidTestImplementation "com.android.support.test:runner:$android_support_test_version"
 		androidTestImplementation "com.android.support.test:rules:$android_support_test_version"
 
-		/**
-		 * UNIT-TEST
-		 */
-
+		//Common unit test
 		testImplementation "junit:junit:$junit_version"
 
-		/**
-		 *  UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST UI-TEST
-		 */
+		//Common UI test
 		androidTestImplementation "org.mockito:mockito-android:$mockito_version"
 
 		// Espresso core
@@ -144,6 +146,7 @@ allprojects {
 		androidTestImplementation "com.android.support.test.espresso:espresso-intents:$espresso_version"
 		androidTestImplementation "com.android.support:support-annotations:$android_support_version"
 
+		// Common test objects
 		//testImplementation project(':module-feature-core-test')
 
 	}
