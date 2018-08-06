@@ -8,6 +8,7 @@ allprojects {
 	apply plugin: 'kotlin-android'
 	apply plugin: 'kotlin-android-extensions'
 	apply plugin: 'kotlin-allopen'
+	apply plugin: 'androidx.navigation.safeargs'
 
 	allOpen {
 		annotation('com.legalzoom.kollaborate.base.OpenForMocking')
@@ -116,6 +117,7 @@ allprojects {
 	dependencies {
 
 		// Common Navigation
+		// Don't forget to apply plugin androidx.navigation.safeargs for every module with navigation (solved in common too)
 		implementation "android.arch.navigation:navigation-fragment:$android_navigation_version"
 		implementation "android.arch.navigation:navigation-ui:$android_navigation_version"
 

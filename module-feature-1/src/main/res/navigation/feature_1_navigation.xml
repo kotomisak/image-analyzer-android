@@ -12,10 +12,11 @@
   ~ limitations under the License.
   -->
 <navigation
+	android:id="@+id/feature_1_navigation"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:id="@+id/feature_1_navigation">
+	app:startDestination="@id/flow_step_one">
 
 	<fragment
 		android:id="@+id/flow_step_one"
@@ -25,9 +26,14 @@
 			android:name="setargs"
 			android:defaultValue="Android!" />
 
+		<argument
+			android:name="step"
+			android:defaultValue="1"
+			argType="integer" />
+
 		<action
 			android:id="@+id/next_action"
-			app:destination="@+id/flow_step_two">
+			app:destination="@id/flow_step_two">
 		</action>
 	</fragment>
 
