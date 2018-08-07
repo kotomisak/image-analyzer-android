@@ -51,8 +51,19 @@ class FlowStepFragment : Fragment() {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 
-		view.findViewById<View>(R.id.next_button).setOnClickListener(
-			Navigation.createNavigateOnClickListener(R.id.next_action)
-		)
+		arguments?.let {
+
+			when (FlowStepFragmentArgs.fromBundle(it).step) {
+				2 -> {
+					//TODO tell somehow to parent component to navigate home
+				}
+				else -> {
+					view.findViewById<View>(R.id.next_button).setOnClickListener(
+						Navigation.createNavigateOnClickListener(R.id.next_action)
+					)
+				}
+			}
+		}
+
 	}
 }
