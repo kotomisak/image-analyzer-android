@@ -4,6 +4,7 @@ import android.app.Application
 import android.support.annotation.Nullable
 import android.util.Log
 import android.util.Log.INFO
+import androidx.navigation.NavDeepLinkBuilder
 import com.example.android.core.ApplicationInterface
 import com.example.android.core.FeatureCore
 import timber.log.Timber
@@ -11,7 +12,11 @@ import timber.log.Timber.DebugTree
 
 class CodeCoverageApplication : Application(), ApplicationInterface {
 	override fun navigateHome() {
-		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+		val homePendingIntent = NavDeepLinkBuilder(this)
+			.setGraph(R.navigation.mobile_navigation)
+			.setDestination(R.id.launcher_home)
+			.createPendingIntent()
+		homePendingIntent.send()
 	}
 
 	override fun onCreate() {
