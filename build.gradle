@@ -34,7 +34,9 @@ buildscript {
         android_navigation_version = "1.0.0-alpha04"
         okhttp_version = '3.8.1'
         retrofit_version = '2.3.0'
-        gson_version = '2.8.1'
+        moshi_version = '1.6.0'
+        moshi_converter_version = '2.4.0'
+
         leakcanary_version = '1.5.4'
         dagger_version = '2.17'
         espresso_version = '3.0.0'

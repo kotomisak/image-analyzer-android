@@ -39,4 +39,8 @@ dependencies {
 	compileOnly 'javax.annotation:jsr250-api:1.0'
 	//	kapt "com.google.dagger:dagger-compiler:$dagger_version"
 	//	kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+
+	//Moshi (general movement from gson to moshi)
+	implementation "com.squareup.moshi:moshi:$moshi_version"
+	implementation "com.squareup.retrofit2:converter-moshi:$moshi_converter_version"
 }
