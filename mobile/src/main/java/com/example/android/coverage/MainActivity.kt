@@ -17,7 +17,6 @@
 package com.example.android.coverage
 
 import android.content.res.Resources
-import android.databinding.DataBindingUtil.setContentView
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.design.widget.NavigationView
@@ -32,10 +31,8 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.crashlytics.android.Crashlytics;
-import io.fabric.sdk.android.Fabric;
-
-
+import com.crashlytics.android.Crashlytics
+import io.fabric.sdk.android.Fabric
 
 /**
  * A simple activity demonstrating use of a NavHostFragment with a navigation drawer.

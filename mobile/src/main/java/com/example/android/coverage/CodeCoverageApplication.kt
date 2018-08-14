@@ -7,6 +7,7 @@ import android.util.Log.INFO
 import androidx.navigation.NavDeepLinkBuilder
 import com.example.android.core.ApplicationInterface
 import com.example.android.core.FeatureCore
+import com.example.android.coverage.di.AppInjector
 import timber.log.Timber
 import timber.log.Timber.DebugTree
 
@@ -29,6 +30,7 @@ class CodeCoverageApplication : Application(), ApplicationInterface {
 		}
 
 		FeatureCore.init(this)
+		AppInjector.init(this)
 	}
 
 	/** A tree which logs important information for crash reporting.  */
