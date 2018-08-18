@@ -1,5 +1,6 @@
 package com.example.android.coverage
 
+import android.app.Activity
 import android.app.Application
 import android.support.annotation.Nullable
 import android.util.Log
@@ -8,10 +9,19 @@ import androidx.navigation.NavDeepLinkBuilder
 import com.example.android.core.ApplicationInterface
 import com.example.android.core.FeatureCore
 import com.example.android.coverage.di.AppInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasActivityInjector
 import timber.log.Timber
 import timber.log.Timber.DebugTree
+import javax.inject.Inject
 
-class CodeCoverageApplication : Application(), ApplicationInterface {
+class CodeCoverageApplication : Application(), ApplicationInterface, HasActivityInjector {
+
+	@Inject
+	lateinit var dispatchingActivityAndroidInjector: DispatchingAndroidInjector<Activity>
+
+	override fun activityInjector(): DispatchingAndroidInjector<Activity> = dispatchingActivityAndroidInjector
+
 	override fun navigateHome() {
 		val homePendingIntent = NavDeepLinkBuilder(this)
 			.setGraph(R.navigation.mobile_navigation)

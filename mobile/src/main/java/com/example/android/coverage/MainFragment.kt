@@ -27,11 +27,12 @@ import android.widget.Button
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import androidx.navigation.Navigation.findNavController
+import com.example.android.core.di.Injectable
 
 /**
  * Fragment used to show how to navigate to another destination
  */
-class MainFragment : Fragment() {
+class MainFragment : Fragment(), Injectable {
 	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
 		savedInstanceState: Bundle?): View? {
 		setHasOptionsMenu(true)

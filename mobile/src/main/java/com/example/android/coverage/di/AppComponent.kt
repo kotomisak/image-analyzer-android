@@ -1,7 +1,7 @@
 package com.example.android.coverage.di
 
 import android.app.Application
-import com.example.android.core.di.FeatureCoreModule
+import com.example.android.core.di.FeatureCoreDaggerModule
 import com.example.android.coverage.CodeCoverageApplication
 import dagger.BindsInstance
 import dagger.Component
@@ -11,7 +11,8 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [
 	AndroidInjectionModule::class,
-	FeatureCoreModule::class
+	FeatureCoreDaggerModule::class
+	//Feature1DaggerModule::class
 ])
 interface AppComponent {
 	@Component.Builder
@@ -23,4 +24,7 @@ interface AppComponent {
 	}
 
 	fun inject(codeCoverageApplication: CodeCoverageApplication)
+
+//	@ContributesAndroidInjector
+//	abstract fun hxasdfa(): MainActivity
 }

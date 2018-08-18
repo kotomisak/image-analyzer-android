@@ -4,10 +4,10 @@
 def mock_files = ['src/mock/resources', '../mock_data/configs', '../mock_data/responses']
 
 allprojects {
-	apply plugin: 'kotlin-kapt'
 	apply plugin: 'kotlin-android'
 	apply plugin: 'kotlin-android-extensions'
 	apply plugin: 'kotlin-allopen'
+	apply plugin: 'kotlin-kapt'
 	apply plugin: 'androidx.navigation.safeargs'
 
 	allOpen {
