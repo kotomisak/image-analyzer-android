@@ -20,9 +20,9 @@ import android.content.res.Resources
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.widget.Toolbar
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -31,13 +31,24 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.crashlytics.android.Crashlytics
+import com.example.android.core.PreferencesCore
 import com.example.android.core.arch.BaseActivity
+import dagger.android.DispatchingAndroidInjector
 import io.fabric.sdk.android.Fabric
+import timber.log.Timber
+import javax.inject.Inject
 
 /**
  * A simple activity demonstrating use of a NavHostFragment with a navigation drawer.
  */
 class MainActivity : BaseActivity() {
+
+	@Inject
+	lateinit var preferencesCore: PreferencesCore
+
+	override fun supportFragmentInjector(): DispatchingAndroidInjector<Fragment> {
+		return dispatchingAndroidInjector
+	}
 
 	private var drawerLayout: DrawerLayout? = null
 
@@ -69,8 +80,10 @@ class MainActivity : BaseActivity() {
 
 			Toast.makeText(this@MainActivity, "Navigated to $dest",
 				Toast.LENGTH_SHORT).show()
-			Log.d("NavigationActivity", "Navigated to $dest")
+			Timber.d("NavigationActivity", "Navigated to $dest")
 		}
+
+		Timber.d(">>>${preferencesCore.sampleToken}")
 	}
 
 	private fun setupBottomNavMenu(navController: NavController) {
