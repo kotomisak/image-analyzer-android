@@ -1,4 +1,4 @@
-package com.example.android.coverage
+package com.example.android.coverage.ui.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.android.core.PreferencesCore
 import com.example.android.core.arch.BaseFragment
+import com.example.android.coverage.R
 import timber.log.Timber
 import javax.inject.Inject
 

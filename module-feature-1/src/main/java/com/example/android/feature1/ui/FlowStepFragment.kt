@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.feature1
+package com.example.android.feature1.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,6 +23,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.android.core.FeatureCore
 import com.example.android.core.arch.BaseFragment
+import com.example.android.feature1.R
 
 /**
  * Presents how multiple steps flow could be implemented.
