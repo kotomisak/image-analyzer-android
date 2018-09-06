@@ -11,6 +11,7 @@ class SettingsViewModel() : ViewModel() {
 	lateinit var preferencesCore: PreferencesCore
 
 	val token: MutableLiveData<String> = MutableLiveData()
+	val dummy: String = "mydummy"
 
 	init {
 		token.value = "testicek"

@@ -1,6 +1,7 @@
 package com.example.android.coverage.ui.settings
 
 import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,9 +13,12 @@ import com.example.android.coverage.R
 import com.example.android.coverage.databinding.FragmentSettingsBinding
 import kotlinx.android.synthetic.main.fragment_settings.view.textX
 import timber.log.Timber
+import java.util.Random
 import javax.inject.Inject
 
-interface SettingsView
+interface SettingsView {
+	fun nextToken()
+}
 
 class SettingsFragment : BaseFragment(), SettingsView {
 
@@ -23,15 +27,11 @@ class SettingsFragment : BaseFragment(), SettingsView {
 
 	private val vmb by vmb<SettingsViewModel, FragmentSettingsBinding>(R.layout.fragment_settings) { SettingsViewModel() }
 
-	init {
-
-	}
-
-	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-		savedInstanceState: Bundle?): View? {
-
-		// Inflate the layout for this fragment
-		return inflater.inflate(R.layout.fragment_settings, container, false)
+	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+		//TODO discuss this weird required extra set with Jakub
+		vmb.binding.view = this
+		vmb.binding.viewModel = ViewModelProviders.of(this).get(SettingsViewModel::class.java)
+		return vmb.rootView
 	}
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -46,4 +46,8 @@ class SettingsFragment : BaseFragment(), SettingsView {
 		})
 	}
 
+	override fun nextToken() {
+		Timber.d(">>>nextToken")
+		vmb.viewModel.token.value = Random().nextInt().toString()
+	}
 }
