@@ -7,11 +7,11 @@
 
 		<variable
 			name="viewModel"
-			type="com.example.android.coverage.ui.settings.SettingsViewModel" />
+			type="com.example.android.coverage.ui.settings.custom.SettingsCustomViewModel" />
 
 		<variable
 			name="view"
-			type="com.example.android.coverage.ui.settings.SettingsView" />
+			type="com.example.android.coverage.ui.settings.custom.SettingsCustomView" />
 
 	</data>
 
@@ -45,7 +45,7 @@
 			android:layout_marginEnd="8dp"
 			android:textAlignment="center"
 			android:textSize="32sp"
-			tools:text="@string/settings_fragment_text"
+			tools:text="@string/settings_custom_fragment_text"
 			app:layout_constraintTop_toBottomOf="@+id/titleX"
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintStart_toStartOf="parent"

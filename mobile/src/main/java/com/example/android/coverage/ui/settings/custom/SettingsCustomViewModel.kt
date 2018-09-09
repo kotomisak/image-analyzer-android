@@ -1,11 +1,11 @@
-package com.example.android.coverage.ui.settings
+package com.example.android.coverage.ui.settings.custom
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.example.android.core.PreferencesCore
 import javax.inject.Inject
 
-class SettingsViewModel() : ViewModel() {
+class SettingsCustomViewModel() : ViewModel() {
 
 	@Inject
 	lateinit var preferencesCore: PreferencesCore

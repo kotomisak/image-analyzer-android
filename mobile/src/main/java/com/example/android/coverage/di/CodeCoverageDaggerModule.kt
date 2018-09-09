@@ -2,7 +2,7 @@ package com.example.android.coverage.di
 
 import com.example.android.coverage.ui.MainActivity
 import com.example.android.coverage.ui.MainFragment
-import com.example.android.coverage.ui.settings.SettingsFragment
+import com.example.android.coverage.ui.settings.custom.SettingsCustomFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -16,6 +16,6 @@ abstract class CodeCoverageDaggerModule {
 	abstract fun contributeCreateMainFragment(): MainFragment
 
 	@ContributesAndroidInjector
-	abstract fun contributeCreateSettingsFragment(): SettingsFragment
+	abstract fun contributeCreateSettingsFragment(): SettingsCustomFragment
 
 }
