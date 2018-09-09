@@ -1,17 +1,22 @@
 package com.example.android.coverage.ui.settings.custom
 
 import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
-import com.example.android.core.PreferencesCore
+import android.databinding.Bindable
+import com.example.android.core.FeatureCore
+import com.example.android.core.arch.ObservableViewModel
+import com.example.android.core.entity.AppVersion
 import javax.inject.Inject
 
-class SettingsCustomViewModel() : ViewModel() {
+class SettingsCustomViewModel : ObservableViewModel() {
 
 	@Inject
-	lateinit var preferencesCore: PreferencesCore
+	lateinit var appVersion: AppVersion
 
 	val token: MutableLiveData<String> = MutableLiveData()
-	val dummy: String = "mydummy"
+
+	val notificationsEnabled: Boolean @Bindable get() = FeatureCore.notificationsEnabled
+
+	val appVersionString = "${appVersion.versionName} (${appVersion.versionCode})"
 
 	init {
 		token.value = "testicek"
