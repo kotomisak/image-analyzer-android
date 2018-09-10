@@ -1,19 +1,15 @@
 package com.example.android.coverage.ui.settings.custom
 
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProvider
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.android.core.PreferencesCore
 import com.example.android.core.arch.BaseFragment
 import com.example.android.core.ktools.vmb
 import com.example.android.coverage.R
 import com.example.android.coverage.databinding.FragmentSettingsCustomBinding
 import timber.log.Timber
-import javax.inject.Inject
 
 interface SettingsCustomView {
 	fun onShowProfileClick()
@@ -23,24 +19,16 @@ interface SettingsCustomView {
 
 class SettingsCustomFragment : BaseFragment(), SettingsCustomView {
 
-	@Inject
-	lateinit var preferencesCore: PreferencesCore
-
-	@Inject
-	lateinit var viewModelFactory: ViewModelProvider.Factory
-
-	private val vmb by vmb<SettingsCustomViewModel, FragmentSettingsCustomBinding>(R.layout.fragment_settings_custom) { ViewModelProviders.of(this, viewModelFactory).get(SettingsCustomViewModel::class.java) }
+	private val vmb by vmb<SettingsCustomViewModel, FragmentSettingsCustomBinding>(R.layout.fragment_settings_custom) { findViewModel(SettingsCustomViewModel::class.java) }
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
+		//TODO discuss this weird required extra set with Jakub
 		vmb.binding.view = this
-		vmb.binding.viewModel = ViewModelProviders.of(this, viewModelFactory).get(SettingsCustomViewModel::class.java)
+		vmb.binding.viewModel = findViewModel(SettingsCustomViewModel::class.java)
 	}
 
 	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-		//TODO discuss this weird required extra set with Jakub
-//		vmb.binding.view = this
-//		vmb.binding.viewModel = ViewModelProviders.of(this).get(SettingsCustomViewModel::class.java)
 		return vmb.rootView
 	}
 
