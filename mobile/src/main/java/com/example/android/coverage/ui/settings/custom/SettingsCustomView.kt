@@ -1,6 +1,7 @@
 package com.example.android.coverage.ui.settings.custom
 
 import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -25,13 +26,15 @@ class SettingsCustomFragment : BaseFragment(), SettingsCustomView {
 	@Inject
 	lateinit var preferencesCore: PreferencesCore
 
+	@Inject
+	lateinit var viewModelFactory: ViewModelProvider.Factory
 
-	private val vmb by vmb<SettingsCustomViewModel, FragmentSettingsCustomBinding>(R.layout.fragment_settings_custom) { SettingsCustomViewModel() }
+	private val vmb by vmb<SettingsCustomViewModel, FragmentSettingsCustomBinding>(R.layout.fragment_settings_custom) { ViewModelProviders.of(this, viewModelFactory).get(SettingsCustomViewModel::class.java) }
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		vmb.binding.view = this
-		vmb.binding.viewModel = ViewModelProviders.of(this).get(SettingsCustomViewModel::class.java)
+		vmb.binding.viewModel = ViewModelProviders.of(this, viewModelFactory).get(SettingsCustomViewModel::class.java)
 	}
 
 	override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
