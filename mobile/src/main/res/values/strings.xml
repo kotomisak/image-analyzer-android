@@ -50,6 +50,7 @@
 	<string name="settings_default_arch">mvvm</string>
 	<string name="settings_arch_summary">Select preferred architecture</string>
 	<string name="settings_arch_title">Architectures</string>
+	<string name="settings_custom_button_title">Button in custom layout of system settings</string>
 
 
 </resources>

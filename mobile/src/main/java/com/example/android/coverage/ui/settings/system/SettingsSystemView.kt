@@ -32,6 +32,18 @@ class SettingsSystemFragment : PreferenceFragmentCompat(), SharedPreferences.OnS
 		}
 	}
 
+//	override fun onPreferenceTreeClick(preference: Preference?): Boolean {
+//		return when (preference.key) {
+//			getString(R.string.pref_key_change_password) -> {
+//				startActivity(Intent(activity, ChangePasswordActivity::class.java))
+//				true
+//			}
+//			else -> {
+//				super.onPreferenceTreeClick(preference)
+//			}
+//		}
+//	}
+
 	override fun onResume() {
 		super.onResume()
 		sharedPreferences.registerOnSharedPreferenceChangeListener(this)
