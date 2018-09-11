@@ -25,6 +25,7 @@
 	<string name="help">Help</string>
 	<string name="settings_custom_fragment_title">Settings fragment custom</string>
 	<string name="settings_custom_fragment_text">Settings text</string>
+	<string name="settings_system_fragment_title">Settings fragment system</string>
 	<string name="shopping_cart">Shopping Cart</string>
 	<string name="shopping_fragment_text">Shopping fragment</string>
 
@@ -32,6 +33,7 @@
 	<string name="title_settings_profile">Profile</string>
 	<string name="title_settings_notifications">Notifications</string>
 	<string name="title_settings_account">Account</string>
+	<string name="title_settings_architecture">Architecture</string>
 	<string name="title_settings_terms_of_use">Terms of Use</string>
 	<string name="title_settings_privacy_policy">Privacy Policy</string>
 	<string name="title_settings_contact_us">Contact Us</string>
@@ -42,5 +44,12 @@
 
 	<string name="notifications_on">On</string>
 	<string name="notifications_off">Off</string>
+
+
+	<string name="settings_arch_key">categoriesKey</string>
+	<string name="settings_default_arch">mvvm</string>
+	<string name="settings_arch_summary">Select preferred architecture</string>
+	<string name="settings_arch_title">Architectures</string>
+
 
 </resources>

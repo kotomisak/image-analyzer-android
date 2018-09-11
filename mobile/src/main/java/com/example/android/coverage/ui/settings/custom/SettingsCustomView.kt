@@ -15,6 +15,7 @@ interface SettingsCustomView {
 	fun onShowProfileClick()
 	fun onNotificationsClick()
 	fun onShowAccountClick()
+	fun onArchClick()
 }
 
 class SettingsCustomFragment : BaseFragment(), SettingsCustomView {
@@ -54,6 +55,10 @@ class SettingsCustomFragment : BaseFragment(), SettingsCustomView {
 	}
 
 	override fun onShowAccountClick() {
+		showToast(getString(R.string.message_not_implemented))
+	}
+
+	override fun onArchClick() {
 		showToast(getString(R.string.message_not_implemented))
 	}
 }

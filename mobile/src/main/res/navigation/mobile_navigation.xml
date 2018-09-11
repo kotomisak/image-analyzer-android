@@ -42,9 +42,12 @@
 		android:name="com.example.android.coverage.ui.settings.custom.SettingsCustomFragment"
 		android:label="@string/settings_custom_fragment_title"
 		tools:layout="@layout/fragment_settings_custom">
-		<argument
-			android:name="setargs"
-			android:defaultValue="Android!" />
+	</fragment>
+
+	<fragment
+		android:id="@+id/settings_fragment_system"
+		android:name="com.example.android.coverage.ui.settings.system.SettingsSystemFragment"
+		android:label="@string/settings_system_fragment_title">
 	</fragment>
 
 	<fragment
