@@ -44,20 +44,16 @@ class SettingsCustomFragment : BaseFragment(), SettingsCustomView {
 		})
 	}
 
-//	override fun nextToken() {
-//		Timber.d(">>>nextToken")
-//		vmb.viewModel.token.value = Random().nextInt().toString()
-//	}
 
 	override fun onShowProfileClick() {
-		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+		showToast(getString(R.string.message_not_implemented))
 	}
 
 	override fun onNotificationsClick() {
-		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+		showToast(getString(R.string.message_not_implemented))
 	}
 
 	override fun onShowAccountClick() {
-		TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+		showToast(getString(R.string.message_not_implemented))
 	}
 }
