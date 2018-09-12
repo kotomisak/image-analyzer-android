@@ -5,10 +5,4 @@
 		android:icon="@drawable/ic_settings"
 		android:title="@string/settings_custom"
 		android:menuCategory="secondary" />
-
-	<item
-		android:id="@+id/settings_fragment_system"
-		android:icon="@drawable/ic_settings"
-		android:title="@string/settings_system"
-		android:menuCategory="secondary" />
 </menu>

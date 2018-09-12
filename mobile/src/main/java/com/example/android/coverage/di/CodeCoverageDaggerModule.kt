@@ -4,8 +4,8 @@ import android.arch.lifecycle.ViewModel
 import com.example.android.core.di.ViewModelKey
 import com.example.android.coverage.ui.MainActivity
 import com.example.android.coverage.ui.MainFragment
-import com.example.android.coverage.ui.settings.custom.SettingsCustomFragment
-import com.example.android.coverage.ui.settings.custom.SettingsCustomViewModel
+import com.example.android.coverage.ui.settings.SettingsCustomFragment
+import com.example.android.coverage.ui.settings.SettingsCustomViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

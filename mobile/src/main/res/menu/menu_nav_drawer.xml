@@ -14,8 +14,4 @@
 		android:id="@id/settings_fragment_custom"
 		android:icon="@drawable/ic_settings"
 		android:title="@string/settings_custom" />
-	<item
-		android:id="@id/settings_fragment_system"
-		android:icon="@drawable/ic_settings"
-		android:title="@string/settings_system" />
 </menu>

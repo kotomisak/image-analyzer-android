@@ -7,11 +7,11 @@
 
 		<variable
 			name="viewModel"
-			type="com.example.android.coverage.ui.settings.custom.SettingsCustomViewModel" />
+			type="com.example.android.coverage.ui.settings.SettingsCustomViewModel" />
 
 		<variable
 			name="view"
-			type="com.example.android.coverage.ui.settings.custom.SettingsCustomView" />
+			type="com.example.android.coverage.ui.settings.SettingsCustomView" />
 
 	</data>
 
@@ -29,106 +29,82 @@
 			android:orientation="vertical"
 			app:layout_constraintBottom_toBottomOf="parent">
 
-			<TableRow
-				android:id="@+id/settings_profile"
-				android:onClick="@{() -> view.onShowProfileClick()}"
-				android:background="?attr/selectableItemBackground"
-				android:paddingTop="@dimen/global_spacing_16"
-				android:gravity="center_vertical"
-				android:paddingBottom="@dimen/global_spacing_16">
+			<!--<TableRow-->
+			<!--android:id="@+id/settings_profile"-->
+			<!--android:onClick="@{() -> view.onShowProfileClick()}"-->
+			<!--android:background="?attr/selectableItemBackground"-->
+			<!--android:paddingTop="@dimen/global_spacing_16"-->
+			<!--android:gravity="center_vertical"-->
+			<!--android:paddingBottom="@dimen/global_spacing_16">-->
 
-				<ImageView
-					android:layout_width="@dimen/global_spacing_24"
-					android:layout_height="@dimen/global_spacing_24"
-					android:layout_marginStart="@dimen/global_spacing_16"
-					android:layout_marginEnd="@dimen/global_spacing_16"
-					app:srcCompat="@drawable/ic_profile" />
+			<!--<ImageView-->
+			<!--android:layout_width="@dimen/global_spacing_24"-->
+			<!--android:layout_height="@dimen/global_spacing_24"-->
+			<!--android:layout_marginStart="@dimen/global_spacing_16"-->
+			<!--android:layout_marginEnd="@dimen/global_spacing_16"-->
+			<!--app:srcCompat="@drawable/ic_profile" />-->
 
-				<TextView
-					android:textAppearance="@style/TextAppearance.Coverage.Body1"
-					android:text="@string/title_settings_profile" />
-			</TableRow>
+			<!--<TextView-->
+			<!--android:textAppearance="@style/TextAppearance.Coverage.Body1"-->
+			<!--android:text="@string/title_settings_profile" />-->
+			<!--</TableRow>-->
 
-			<View
-				android:layout_marginStart="@dimen/global_spacing_16"
-				style="@style/Widget.Coverage.Divider" />
+			<!--<View-->
+			<!--android:layout_marginStart="@dimen/global_spacing_16"-->
+			<!--style="@style/Widget.Coverage.Divider" />-->
 
-			<TableRow
-				android:id="@+id/settings_notifications"
-				android:onClick="@{() -> view.onNotificationsClick()}"
-				android:background="?attr/selectableItemBackground"
-				android:paddingTop="@dimen/global_spacing_16"
-				android:gravity="center_vertical"
-				android:paddingBottom="@dimen/global_spacing_16">
+			<!--<TableRow-->
+			<!--android:id="@+id/settings_notifications"-->
+			<!--android:onClick="@{() -> view.onNotificationsClick()}"-->
+			<!--android:background="?attr/selectableItemBackground"-->
+			<!--android:paddingTop="@dimen/global_spacing_16"-->
+			<!--android:gravity="center_vertical"-->
+			<!--android:paddingBottom="@dimen/global_spacing_16">-->
 
-				<ImageView
-					android:layout_width="@dimen/global_spacing_24"
-					android:layout_height="@dimen/global_spacing_24"
-					android:layout_marginStart="@dimen/global_spacing_16"
-					android:layout_marginEnd="@dimen/global_spacing_16"
-					app:srcCompat="@drawable/ic_notifications" />
+			<!--<ImageView-->
+			<!--android:layout_width="@dimen/global_spacing_24"-->
+			<!--android:layout_height="@dimen/global_spacing_24"-->
+			<!--android:layout_marginStart="@dimen/global_spacing_16"-->
+			<!--android:layout_marginEnd="@dimen/global_spacing_16"-->
+			<!--app:srcCompat="@drawable/ic_notifications" />-->
 
-				<TextView
-					android:layout_weight="1"
-					android:textAppearance="@style/TextAppearance.Coverage.Body1"
-					android:text="@string/title_settings_notifications" />
+			<!--<TextView-->
+			<!--android:layout_weight="1"-->
+			<!--android:textAppearance="@style/TextAppearance.Coverage.Body1"-->
+			<!--android:text="@string/title_settings_notifications" />-->
 
-				<TextView
-					android:id="@+id/notifications_indicator"
-					android:textAppearance="@style/TextAppearance.Coverage.Body1.Disabled"
-					android:paddingStart="@dimen/global_spacing_16"
-					android:paddingEnd="@dimen/global_spacing_16"
-					android:text="@{viewModel.notificationsEnabled ? @string/notifications_on : @string/notifications_off}"
-					tools:text="On" />
-			</TableRow>
+			<!--<TextView-->
+			<!--android:id="@+id/notifications_indicator"-->
+			<!--android:textAppearance="@style/TextAppearance.Coverage.Body1.Disabled"-->
+			<!--android:paddingStart="@dimen/global_spacing_16"-->
+			<!--android:paddingEnd="@dimen/global_spacing_16"-->
+			<!--android:text="@{viewModel.notificationsEnabled ? @string/notifications_on : @string/notifications_off}"-->
+			<!--tools:text="On" />-->
+			<!--</TableRow>-->
 
-			<View
-				android:layout_marginStart="@dimen/global_spacing_16"
-				style="@style/Widget.Coverage.Divider" />
+			<!--<View-->
+			<!--android:layout_marginStart="@dimen/global_spacing_16"-->
+			<!--style="@style/Widget.Coverage.Divider" />-->
 
-			<TableRow
-				android:id="@+id/settings_account"
-				android:onClick="@{() -> view.onShowAccountClick()}"
-				android:background="?attr/selectableItemBackground"
-				android:paddingTop="@dimen/global_spacing_16"
-				android:gravity="center_vertical"
-				android:paddingBottom="@dimen/global_spacing_16">
+			<!--<TableRow-->
+			<!--android:id="@+id/settings_account"-->
+			<!--android:onClick="@{() -> view.onShowAccountClick()}"-->
+			<!--android:background="?attr/selectableItemBackground"-->
+			<!--android:paddingTop="@dimen/global_spacing_16"-->
+			<!--android:gravity="center_vertical"-->
+			<!--android:paddingBottom="@dimen/global_spacing_16">-->
 
-				<ImageView
-					android:layout_width="@dimen/global_spacing_24"
-					android:layout_height="@dimen/global_spacing_24"
-					android:layout_marginStart="@dimen/global_spacing_16"
-					android:layout_marginEnd="@dimen/global_spacing_16"
-					app:srcCompat="@drawable/ic_account" />
+			<!--<ImageView-->
+			<!--android:layout_width="@dimen/global_spacing_24"-->
+			<!--android:layout_height="@dimen/global_spacing_24"-->
+			<!--android:layout_marginStart="@dimen/global_spacing_16"-->
+			<!--android:layout_marginEnd="@dimen/global_spacing_16"-->
+			<!--app:srcCompat="@drawable/ic_account" />-->
 
-				<TextView
-					android:textAppearance="@style/TextAppearance.Coverage.Body1"
-					android:text="@string/title_settings_account" />
-			</TableRow>
-
-			<View
-				android:layout_marginStart="@dimen/global_spacing_16"
-				style="@style/Widget.Coverage.Divider" />
-
-			<TableRow
-				android:id="@+id/settings_arch"
-				android:onClick="@{() -> view.onShowAccountClick()}"
-				android:background="?attr/selectableItemBackground"
-				android:paddingTop="@dimen/global_spacing_16"
-				android:gravity="center_vertical"
-				android:paddingBottom="@dimen/global_spacing_16">
-
-				<ImageView
-					android:layout_width="@dimen/global_spacing_24"
-					android:layout_height="@dimen/global_spacing_24"
-					android:layout_marginStart="@dimen/global_spacing_16"
-					android:layout_marginEnd="@dimen/global_spacing_16"
-					app:srcCompat="@drawable/ic_architecture" />
-
-				<TextView
-					android:textAppearance="@style/TextAppearance.Coverage.Body1"
-					android:text="@string/title_settings_architecture" />
-			</TableRow>
+			<!--<TextView-->
+			<!--android:textAppearance="@style/TextAppearance.Coverage.Body1"-->
+			<!--android:text="@string/title_settings_account" />-->
+			<!--</TableRow>-->
 
 			<Space
 				android:layout_height="0dp"

@@ -1,4 +1,4 @@
-package com.example.android.coverage.ui.settings.custom
+package com.example.android.coverage.ui.settings
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle
