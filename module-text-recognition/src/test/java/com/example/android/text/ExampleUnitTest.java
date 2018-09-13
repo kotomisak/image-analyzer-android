@@ -1,4 +1,4 @@
-package com.example.android.feature1;
+package com.example.android.text;
 
 import org.junit.Test;
 

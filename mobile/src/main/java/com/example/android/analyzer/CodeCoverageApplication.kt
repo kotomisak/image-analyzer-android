@@ -1,4 +1,4 @@
-package com.example.android.coverage
+package com.example.android.analyzer
 
 import android.app.Activity
 import android.app.Application
@@ -6,9 +6,9 @@ import android.support.annotation.Nullable
 import android.util.Log
 import android.util.Log.INFO
 import androidx.navigation.NavDeepLinkBuilder
+import com.example.android.analyzer.di.AppInjector
 import com.example.android.core.ApplicationInterface
 import com.example.android.core.FeatureCore
-import com.example.android.coverage.di.AppInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import timber.log.Timber

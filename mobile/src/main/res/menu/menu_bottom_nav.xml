@@ -6,7 +6,7 @@
 		android:title="@string/home" />
 
 	<item
-		android:id="@id/android"
+		android:id="@id/text_recognition_navigation"
 		android:icon="@drawable/ic_text_recognition"
 		android:title="@string/text_recognition_action" />
 

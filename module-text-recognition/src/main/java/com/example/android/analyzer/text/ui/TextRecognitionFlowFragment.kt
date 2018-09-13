@@ -14,22 +14,21 @@
  * limitations under the License.
  */
 
-package com.example.android.feature1.ui
+package com.example.android.analyzer.text.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.example.android.analyzer.text.R
 import com.example.android.core.FeatureCore
 import com.example.android.core.arch.BaseFragment
-import com.example.android.feature1.R
 
 /**
- * Presents how multiple steps flow could be implemented.
+ * Text recognition multi-step flow.
  */
-class FlowStepFragment : BaseFragment() {
-
+class TextRecognitionFlowFragment : BaseFragment() {
 
 	override fun onCreateView(
 		inflater: LayoutInflater, container: ViewGroup?,
@@ -41,13 +40,13 @@ class FlowStepFragment : BaseFragment() {
 
 		val step = arguments?.let {
 
-			val safeArgs = FlowStepFragmentArgs.fromBundle(it)
+			val safeArgs = TextRecognitionFlowFragmentArgs.fromBundle(it)
 			safeArgs.step
 		}
 
 		return when (step) {
-			2 -> inflater.inflate(R.layout.flow_step_two_fragment, container, false)
-			else -> inflater.inflate(R.layout.flow_step_one_fragment, container, false)
+			2 -> inflater.inflate(R.layout.text_recognition_fragment, container, false)
+			else -> inflater.inflate(R.layout.text_source_definition_fragment, container, false)
 		}
 	}
 
@@ -57,7 +56,7 @@ class FlowStepFragment : BaseFragment() {
 		//Timber.d(">>>${application.baseContext}")
 		arguments?.let { it ->
 
-			when (FlowStepFragmentArgs.fromBundle(it).step) {
+			when (TextRecognitionFlowFragmentArgs.fromBundle(it).step) {
 				2 -> {
 					view.findViewById<View>(R.id.next_button).setOnClickListener { FeatureCore.applicationInterface.navigateHome() }
 				}

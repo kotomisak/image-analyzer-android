@@ -1,14 +1,14 @@
-package com.example.android.coverage.ui.settings
+package com.example.android.analyzer.ui.settings
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.android.analyzer.R
+import com.example.android.analyzer.databinding.FragmentSettingsCustomBinding
 import com.example.android.core.arch.BaseFragment
 import com.example.android.core.ktools.vmb
-import com.example.android.coverage.R
-import com.example.android.coverage.databinding.FragmentSettingsCustomBinding
 import timber.log.Timber
 
 interface SettingsCustomView {
@@ -44,7 +44,6 @@ class SettingsCustomFragment : BaseFragment(), SettingsCustomView {
 			}
 		})
 	}
-
 
 	override fun onShowProfileClick() {
 		showToast(getString(R.string.message_not_implemented))

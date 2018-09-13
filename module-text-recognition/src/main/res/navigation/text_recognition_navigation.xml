@@ -12,16 +12,17 @@
   ~ limitations under the License.
   -->
 <navigation
-	android:id="@+id/feature_1_navigation"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/text_recognition_navigation"
 	app:startDestination="@id/flow_step_one">
 
 	<fragment
 		android:id="@+id/flow_step_one"
-		android:name="com.example.android.feature1.ui.FlowStepFragment"
-		tools:layout="@layout/flow_step_one_fragment">
+		android:name="com.example.android.analyzer.text.ui.TextRecognitionFlowFragment"
+		android:label="Text recognition"
+		tools:layout="@layout/text_source_definition_fragment">
 		<argument
 			android:name="setargs"
 			android:defaultValue="Android!" />
@@ -39,8 +40,9 @@
 
 	<fragment
 		android:id="@+id/flow_step_two"
-		android:name="com.example.android.feature1.ui.FlowStepFragment"
-		tools:layout="@layout/flow_step_two_fragment">
+		android:name="com.example.android.analyzer.text.ui.TextRecognitionFlowFragment"
+		android:label="Text recognition"
+		tools:layout="@layout/text_recognition_fragment">
 
 		<argument
 			android:name="step"

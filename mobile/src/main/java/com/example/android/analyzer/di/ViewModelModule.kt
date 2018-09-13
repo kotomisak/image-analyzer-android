@@ -1,4 +1,4 @@
-package com.example.android.coverage.di
+package com.example.android.analyzer.di
 
 import android.arch.lifecycle.ViewModelProvider
 import dagger.Binds

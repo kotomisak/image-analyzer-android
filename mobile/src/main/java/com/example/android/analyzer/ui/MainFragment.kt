@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.coverage.ui
+package com.example.android.analyzer.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -26,8 +26,8 @@ import android.widget.Button
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import androidx.navigation.Navigation.findNavController
+import com.example.android.analyzer.R
 import com.example.android.core.arch.BaseFragment
-import com.example.android.coverage.R
 
 /**
  * Fragment used to show how to navigate to another destination
@@ -54,7 +54,7 @@ class MainFragment : BaseFragment() {
 			.build()
 
 		view.findViewById<Button>(R.id.navigate_dest_bt)?.setOnClickListener {
-			findNavController(it).navigate(R.id.feature_1_navigation, null, options)
+			findNavController(it).navigate(R.id.text_recognition_navigation, null, options)
 		}
 		view.findViewById<Button>(R.id.navigate_action_bt)?.setOnClickListener(
 			Navigation.createNavigateOnClickListener(R.id.next_action, null)

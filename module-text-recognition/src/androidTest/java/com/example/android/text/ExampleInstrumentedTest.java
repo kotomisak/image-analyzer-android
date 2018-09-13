@@ -1,4 +1,4 @@
-package com.example.android.feature1;
+package com.example.android.text;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

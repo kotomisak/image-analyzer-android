@@ -1,4 +1,4 @@
-package com.example.android.coverage.di
+package com.example.android.analyzer.di
 
 import android.app.Activity
 import android.app.Application
@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
+import com.example.android.analyzer.CodeCoverageApplication
 import com.example.android.core.di.Injectable
-import com.example.android.coverage.CodeCoverageApplication
 import dagger.android.AndroidInjection
 import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.HasSupportFragmentInjector

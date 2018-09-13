@@ -1,4 +1,4 @@
-package com.example.android.coverage.ui.settings
+package com.example.android.analyzer.ui.settings
 
 import android.arch.lifecycle.MutableLiveData
 import android.databinding.Bindable

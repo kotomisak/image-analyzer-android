@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.coverage.ui.deeplink;
+package com.example.android.analyzer.ui.deeplink;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -33,7 +33,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.android.coverage.R;
+import com.example.android.analyzer.R;
 
 import androidx.navigation.Navigation;
 
