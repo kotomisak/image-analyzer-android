@@ -16,7 +16,7 @@
 	<string name="drawer_open">Open Navigation Drawer</string>
 	<string name="drawer_close">Close Navigation Drawer</string>
 	<string name="bottom_navigation">Bottom Nav</string>
-	<string name="home">Home</string>
+	<string name="home">Dashboard</string>
 	<string name="deeplink">Deep link</string>
 	<string name="system_settings">System App Info</string>
 	<string name="settings_custom">Settings Custom</string>

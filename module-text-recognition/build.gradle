@@ -1,15 +1,15 @@
-apply from: "../module-feature-core/library.gradle"
+apply from: "../module-core/library.gradle"
 
 android {
-
 	defaultConfig {
 		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
 	}
-
 }
 
 dependencies {
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+	implementation project(':module-core')
 
 }

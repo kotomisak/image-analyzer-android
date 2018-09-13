@@ -1,4 +1,4 @@
-apply from: "../module-feature-core/library.gradle"
+apply from: "../module-core/library.gradle"
 
 android {
 
