@@ -2,10 +2,10 @@ package com.example.android.analyzer.ui.settings
 
 import android.arch.lifecycle.MutableLiveData
 import android.databinding.Bindable
-import com.example.android.core.FeatureCore
-import com.example.android.core.PreferencesCore
+import com.example.android.analyzer.core.FeatureCore
+import com.example.android.analyzer.core.PreferencesCore
+import com.example.android.analyzer.core.entity.AppVersion
 import com.example.android.core.arch.ObservableViewModel
-import com.example.android.core.entity.AppVersion
 import javax.inject.Inject
 
 class SettingsCustomViewModel @Inject constructor(appVersion: AppVersion) : ObservableViewModel() {

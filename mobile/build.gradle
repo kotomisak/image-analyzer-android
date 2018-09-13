@@ -30,7 +30,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [crashlytics:getLocalProperty("crashlytics.key")]
-        resValue "string", "app_name", "Test Coverage (DEFAULT)"
+        resValue "string", "app_name", "iAnalyzer (DEFAULT)"
     }
 
     buildTypes {
@@ -53,20 +53,20 @@ android {
             dimension = "env"
             versionNameSuffix "-mock"
             applicationIdSuffix ".mock"
-            resValue "string", "app_name", "Test Coverage (MOCK)"
+            resValue "string", "app_name", "iAnalyzer M"
         }
 
         dev {
             dimension = "env"
             versionNameSuffix "-dev"
             applicationIdSuffix ".dev"
-            resValue "string", "app_name", "Test Coverage (DEV)"
+            resValue "string", "app_name", "iAnalyzer D"
         }
 
         production {
             dimension = "env"
             applicationIdSuffix ".prod"
-            resValue "string", "app_name", "Test Coverage"
+            resValue "string", "app_name", "iAnalyzer"
         }
     }
 

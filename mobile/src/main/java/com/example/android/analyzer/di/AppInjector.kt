@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
 import com.example.android.analyzer.CodeCoverageApplication
-import com.example.android.core.di.Injectable
+import com.example.android.analyzer.core.di.Injectable
 import dagger.android.AndroidInjection
 import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.HasSupportFragmentInjector

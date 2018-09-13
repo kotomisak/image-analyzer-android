@@ -1,11 +1,11 @@
 package com.example.android.analyzer.di
 
 import android.arch.lifecycle.ViewModel
+import com.example.android.analyzer.core.di.ViewModelKey
 import com.example.android.analyzer.ui.MainActivity
 import com.example.android.analyzer.ui.MainFragment
 import com.example.android.analyzer.ui.settings.SettingsCustomFragment
 import com.example.android.analyzer.ui.settings.SettingsCustomViewModel
-import com.example.android.core.di.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

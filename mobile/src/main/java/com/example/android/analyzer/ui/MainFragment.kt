@@ -27,7 +27,7 @@ import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import androidx.navigation.Navigation.findNavController
 import com.example.android.analyzer.R
-import com.example.android.core.arch.BaseFragment
+import com.example.android.analyzer.core.arch.BaseFragment
 
 /**
  * Fragment used to show how to navigate to another destination

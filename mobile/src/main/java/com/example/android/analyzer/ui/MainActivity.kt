@@ -31,8 +31,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.crashlytics.android.Crashlytics
 import com.example.android.analyzer.R
-import com.example.android.core.PreferencesCore
-import com.example.android.core.arch.BaseActivity
+import com.example.android.analyzer.core.PreferencesCore
+import com.example.android.analyzer.core.arch.BaseActivity
 import dagger.android.DispatchingAndroidInjector
 import io.fabric.sdk.android.Fabric
 import timber.log.Timber

@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.android.analyzer.R
+import com.example.android.analyzer.core.arch.BaseFragment
+import com.example.android.analyzer.core.ktools.vmb
 import com.example.android.analyzer.databinding.FragmentSettingsCustomBinding
-import com.example.android.core.arch.BaseFragment
-import com.example.android.core.ktools.vmb
 import timber.log.Timber
 
 interface SettingsCustomView {

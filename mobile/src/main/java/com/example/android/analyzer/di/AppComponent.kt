@@ -2,8 +2,8 @@ package com.example.android.analyzer.di
 
 import android.app.Application
 import com.example.android.analyzer.CodeCoverageApplication
+import com.example.android.analyzer.core.di.FeatureCoreModule
 import com.example.android.analyzer.text.di.TextRecognitionDaggerModule
-import com.example.android.core.di.FeatureCoreModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule

@@ -21,9 +21,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.example.android.analyzer.core.FeatureCore
+import com.example.android.analyzer.core.arch.BaseFragment
 import com.example.android.analyzer.text.R
-import com.example.android.core.FeatureCore
-import com.example.android.core.arch.BaseFragment
 
 /**
  * Text recognition multi-step flow.
