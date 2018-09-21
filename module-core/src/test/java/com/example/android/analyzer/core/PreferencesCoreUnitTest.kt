@@ -44,7 +44,7 @@ class PreferencesCoreUnitTest {
 	class SampleTokenNullException : RuntimeException()
 
 	@Test(expected = SampleTokenNullException::class)
-	fun `expect clearSampletoken put null to sampleToken value 1`() {
+	fun `expect clearSampletoken put null to sampleToken value`() {
 		doReturn(editor).`when`(sharedPreferences).edit()
 		Mockito.`when`(sharedPreferences.edit().putString(PREFS_SAMPLE_TOKEN, null)).thenThrow(SampleTokenNullException())
 		preferencesCore.clearSampleToken()
