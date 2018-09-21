@@ -27,4 +27,9 @@ fun setImageResource(imageView: ImageView, resource: Int) {
 fun setFabEnabled(view: FloatingActionButton, isEnabled: Boolean) {
 	view.isEnabled = isEnabled
 	view.backgroundTintList = ContextCompat.getColorStateList(view.context, if (isEnabled) R.color.global_accent else R.color.global_control_disabled)
+	if (isEnabled) {
+		view.colorFilter = null
+	} else {
+		view.setColorFilter(ContextCompat.getColor(view.context, R.color.global_text_disable), android.graphics.PorterDuff.Mode.SRC_IN)
+	}
 }
