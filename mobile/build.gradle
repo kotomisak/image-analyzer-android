@@ -20,6 +20,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'io.fabric'
 
+final APK_NAME = "ImageAnalyzer"
+
 android {
     compileSdkVersion sdk_version
     defaultConfig {
@@ -72,6 +74,18 @@ android {
 
     lintOptions {
         abortOnError false
+    }
+
+    applicationVariants.all {variant ->
+
+        //exclude test utils from any generated apk variant
+        variant.getCompileConfiguration().exclude module: 'module-test-utils'
+        variant.getRuntimeConfiguration().exclude module: 'modole-test-utils'
+        renameArtifact(variant, APK_NAME)
+
+//        def filesAuthorityValue = applicationId + ".fileprovider"
+//        variant.buildConfigField "String", "FILES_AUTHORITY", "\"${filesAuthorityValue}\""
+//        variant.getMergedFlavor().manifestPlaceholders = [filesAuthority: filesAuthorityValue]
     }
 
 }
