@@ -154,6 +154,9 @@ allprojects {
 		//Logging
 		implementation 'com.jakewharton.timber:timber:4.7.1'
 
+
+		/* TEST DEPENDENCIES BASICS FOR EVERY MODULE - for ability to test modules with lower dependency than module-test-utils */
+
 		// Common AndroidJUnitRunner and JUnit Rules
 		androidTestImplementation "com.android.support.test:runner:$android_support_test_version"
 		androidTestImplementation "com.android.support.test:rules:$android_support_test_version"
