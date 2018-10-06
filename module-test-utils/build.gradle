@@ -1,17 +1,28 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-allopen'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs'
 
 kapt {
 	useBuildCache = true
 	correctErrorTypes = true // avoid unknown type replacing with NonExistentClass
 }
 
+allOpen {
+	annotation('com.example.android.analyzer.core.OpenForMocking')
+}
+
 android {
 
 	compileSdkVersion sdk_version
 	buildToolsVersion build_tools_version
+
+	compileSdkVersion sdk_version
+	buildToolsVersion build_tools_version
+	dataBinding.enabled true
+	flavorDimensions "env"
 
 	defaultConfig {
 		minSdkVersion min_sdk_version
@@ -96,3 +107,4 @@ repositories {
 	}
 	mavenCentral()
 }
+

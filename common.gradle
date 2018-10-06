@@ -11,7 +11,7 @@ allprojects {
 	apply plugin: 'androidx.navigation.safeargs'
 
 	allOpen {
-		annotation('com.legalzoom.kollaborate.base.OpenForMocking')
+		annotation('com.example.android.analyzer.core.OpenForMocking')
 	}
 
 	kapt {
