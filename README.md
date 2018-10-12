@@ -12,7 +12,7 @@ App it self contains several business modules to provide Google MLKit functional
 # Android MeetUp presentation
 
 Look at slides from my talk on Android meetup:<br/>
-[ ![STRV](./extras/presenation/coverage_logo.png) ](./extras/presenation/AndroidCodeCoverage.png)<br/>
+[ ![STRV](./extras/presentation/coverage_logo.png) ](./extras/presentation/AndroidCodeCoverage.pdf)<br/>
 
 
 # Code Schema
