@@ -35,9 +35,11 @@ android {
 		release {
 			minifyEnabled false
 			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+			//TODO UI? testCoverageEnabled = true
 		}
 		debug {
 			minifyEnabled false
+			//TODO UI? testCoverageEnabled = true
 		}
 	}
 	dataBinding {

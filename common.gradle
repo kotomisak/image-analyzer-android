@@ -76,11 +76,12 @@ allprojects {
 		buildTypes {
 			debug {
 				buildConfigField "boolean", "LOGS", "true"
+				//TODO UI testing? testCoverageEnabled = true
 			}
 
 			release {
 				buildConfigField "boolean", "LOGS", "false"
-
+				//TODO UI testing? testCoverageEnabled = true
 				zipAlignEnabled true
 				minifyEnabled true
 
